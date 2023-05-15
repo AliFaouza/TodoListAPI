@@ -1,6 +1,6 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-hder("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 $pdo = new PDO('mysql:dbname=to-do list; host=localhost', 'root', 'root');
 
@@ -12,7 +12,7 @@ $niveau = $_POST['niveau'];
 
 
 // Requête pour modifier la liste correspondant à l'id envoyé
-$sql = "UPDATE tache SET nom= :nom, description= :description, niveau= :niveau WHERE tache.id_tache= :id_tache;";
+$sql = "UPDATE tache SET nom= :nom, description= :description, niveau= :niveau WHERE id_tache= :id_tache;";
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':nom', $nom);
 $stmt->bindParam(':description', $description);
@@ -24,5 +24,6 @@ if ($stmt->execute()) {
 } else {
     echo "Erreur lors de la modification de la liste: " . $stmt->errorInfo()[2];
 }
-echo $id_liste.' '.$nom.' '.$description;
+echo $id_liste.' '.$nom.' '.$description.' '.$niveau;
+echo 'salut!!!';
 ?>
