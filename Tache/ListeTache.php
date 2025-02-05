@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
-$pdo = new PDO('mysql:dbname=to-do list; host=localhost', 'root', 'root');
+$pdo = new PDO('mysql:dbname=todolistapi; host=localhost', 'root', 'root');
 
 // Exécution de la requête avec l'id de la liste en paramètre
 $id_liste = $_GET['id_liste'];

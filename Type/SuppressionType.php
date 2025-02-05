@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 // Connexion à la base de données
-$pdo = new PDO('mysql:dbname=to-do list; host=localhost', 'root', 'root');
+$pdo = new PDO('mysql:dbname=todolistapi; host=localhost', 'root', '');
 
 // Récupérer l'id de la liste à supprimer
 $id_type = $_POST['id_type'];

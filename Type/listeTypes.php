@@ -1,6 +1,6 @@
 <?php 
 header("Access-Control-Allow-Origin: *");
-$pdo = new PDO(dsn:'mysql:dbname=to-do list; host=localhost', username:'root', password:'root');
+$pdo = new PDO(dsn:'mysql:dbname=todolistapi; host=localhost', username:'root', password:'');
 
 $sql = 'Select * from type';
 $prep = $pdo->prepare($sql);

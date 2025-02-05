@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 
-$pdo = new PDO('mysql:dbname=to-do list; host=localhost', 'root', 'root');
+$pdo = new PDO('mysql:dbname=todolistapi; host=localhost', 'root', '');
 
 // Récupération des données du formulaire
 $nom = $_POST['name'];
